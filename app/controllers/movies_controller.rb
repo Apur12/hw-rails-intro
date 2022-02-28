@@ -21,7 +21,6 @@ class MoviesController < ApplicationController
           filteredMovies, @chosenRatings = Movie.all, @all_ratings
         end
       end
-    # movies is Movie.all now
       if sortParams == nil
         sortParams = session[:sort]
       end
@@ -91,4 +90,4 @@ class MoviesController < ApplicationController
     def movie_params
       params.require(:movie).permit(:title, :rating, :description, :release_date)
     end
-  end
+end
